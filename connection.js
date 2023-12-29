@@ -9,9 +9,9 @@ require('dotenv').config();
 // }) 
 
  module.exports = mysql.createPool({
-  host: "us-cdbr-iron-east-04.cleardb.net",
-  user: "bb0981c7c6fcc0",
-  password: "7ed34ca0",
-  database: "heroku_6c2a2cfdeb5cf35",
+  host: "--------------------",
+  user: "--------------------",
+  password: "--------------------",
+  database: "--------------------",
   connectionLimit : 50
 }) 
