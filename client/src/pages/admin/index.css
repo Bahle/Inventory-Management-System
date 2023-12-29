@@ -1,0 +1,27 @@
+#login-container {
+  text-align: center;
+  background: url(/images/biology-wallpaper-24.jpg);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+/* body {
+	background-color: #eee;
+	background-image: url('/images/biology-wallpaper-24.jpg');
+} */
+.login-form {
+  max-width: 300px;
+}
+.login-form-forgot {
+  float: right;
+}
+.login-form-button {
+  width: 100%;
+}
+#root {
+	height: 100vh;
+	background: #f0f2f5;
+}

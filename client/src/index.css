@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.input-readonly {
+	background: white !important;
+	color: #888 !important;
+}
+
+.form-input-label {
+	line-height: 29px;
+	font-weight: bold;
+	font-size: 14px;
+	margin-left: 3px;
+	color: #777;
+	display: inline-block;
+}

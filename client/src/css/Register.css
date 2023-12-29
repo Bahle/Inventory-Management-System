@@ -1,0 +1,26 @@
+body {
+	background-color: olive;
+}
+#components-form-demo-normal-login .login-form {
+  max-width: 300px;
+}
+#components-form-demo-normal-login .login-form-forgot {
+  float: right;
+}
+#components-form-demo-normal-login .login-form-button {
+  width: 100%;
+}
+.social-button {
+	display: block;
+	width: 100%;
+	margin: 5px 0;
+	font-size: 20px;
+}
+.social-button i {
+	color: white;
+	font-size: 24px;
+	position: absolute;
+	left: 12px;
+	line-height: 30px;
+	height: 48px;
+}

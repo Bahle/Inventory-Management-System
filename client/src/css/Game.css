@@ -1,0 +1,163 @@
+body {
+	padding: 30px;
+	background: #eee;
+}
+#game-container {
+	background-image: url(/images/gameboard.png);
+	width: 766px;
+	height: 528px;
+}
+#game-container input[type=checkbox], #game-container .checkbox {
+	position: absolute;
+	z-index: 10;
+}
+
+/* ***
+.black-finished input[type="checkbox"]:checked,
+.black-finished input[type="checkbox"]:checked + label,
+.white-finished input[type="checkbox"]:checked,
+.white-finished input[type="checkbox"]:checked + label
+{
+	z-index: -1 !important;
+}
+*** */
+
+.cow-container {
+	position: absolute;
+	left: 0;
+
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	/*border: solid thin;*/
+}
+
+/* *** */
+.checkbox input[type="checkbox"] {
+    opacity: 0;
+    cursor: pointer;
+    left: 0;
+}
+
+.checkbox label {
+    position: relative;
+    display: inline-block;
+    
+    /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
+    padding-left: 22px;
+}
+
+.checkbox label::before,
+.checkbox label::after {
+    position: absolute;
+    content: "";
+    
+    /*Needed for the line-height to take effect*/
+    display: inline-block;
+}
+
+/*Outer box of the fake checkbox*/
+.checkbox label::before, .cow {
+    height: 48px;
+    width: 48px;
+    
+    border: 1px solid;
+    left: 0px;
+
+    background: white;
+    
+    top: 3px;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.checkbox label::before {
+	/*content: url(images/white.png);*/
+}
+
+/*content: url(images/black.png);*/
+
+.cow {
+ 	opacity: 1;
+ 	margin: 7px 0;
+}
+
+.cow.black {
+	background: black;
+}
+
+input[side=black] + label::before,
+input.black + label::before {
+	background: black !important;
+	content: url(/images/black.png);
+}
+
+.checkbox input[type="checkbox"]:checked + label::before {
+    opacity: 1 !important;
+}
+
+.checkbox input[type="checkbox"]:not(:checked):hover + label::before {
+    opacity: 0.5 !important;
+}
+
+.black-finished input[type="checkbox"].black:not(:checked):hover + label::before,
+.black-capturing input[type="checkbox"].black:not(:checked):hover + label::before,
+.white-finished input[type="checkbox"].white:not(:checked):hover + label::before,
+.white-capturing input[type="checkbox"].white:not(:checked):hover + label::before
+{
+	opacity: 0 !important;
+}
+
+.checkbox label {
+	position: absolute;
+	left: 0;
+}
+/* *** */
+
+/* counter bootstrap css */
+*, ::after, ::before {
+	box-sizing: initial;
+}
+
+#game-container .row {
+	margin: 0 !important;
+}
+
+.cow-counter {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 50px;
+	height: 50px;
+	margin-left: 6px;
+	font-weight: bold;
+	color: #666;
+}
+/* *** */
+
+.checkbox {
+	/*border: solid thin;*/
+	/*display: block;
+	height: 60px;
+	width: 100px;*/
+	height: 60px;
+	width: 100px;
+}
+.alert {
+	position: absolute;
+	/*top: 74px;*/
+	width: 766px;
+	z-index: 1000000;
+}
+.cow-container.possible-move label::before {
+	height: 18px !important;
+	width: 18px !important;
+	left: 12px;
+	top: 18px;
+	background: red;
+	border: none !important;
+	opacity: 1 !important;
+}
+.cow.mini {
+	width: 32px;
+	height: 32px;
+}
